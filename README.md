@@ -78,6 +78,8 @@ ProjectHealBuddy/
 - Visit the Calm Companion for fun distraction  
 - Experience the emotional support tone ➡️ MindEase
 
+---
+
 ## 🔮 Future Improvements
 
 - 📚 **RAG (Retrieval-Augmented Generation)**  
