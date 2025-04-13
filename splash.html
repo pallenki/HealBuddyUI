@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HEALBUDDY – Loading</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #EFF4EC;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 250px;
+      animation: fadeInOut 3s ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: scale(0.95); }
+      20% { opacity: 1; transform: scale(1); }
+      80% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0.98); }
+    }
+  </style>
+</head>
+<body>
+  <img src="healbuddy.png" alt="HealBuddy Logo">
+  <script>
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 3000);
+  </script>
+</body>
+</html>

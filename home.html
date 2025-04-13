@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HEALBUDDY – Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header class="fancy-header">
+    <div class="logo-container">
+      <a href="home.html">
+        <img src="Health.jpg" alt="HEALBUDDY" class="fancy-logo" />
+      </a>
+      <h1>HEALBUDDY</h1>
+    </div>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="chatbots.html">CHATBOTS</a>
+        <a href="#">MY PROFILE</a>
+  </header>
+
+  <main>
+    <div class="intro-box" id="greeting"></div>
+
+    <div class="card-container">
+      <div class="feature-card" onclick="showDietChart()">
+        <img src="dietchart.jpg" alt="Diet Chart" />
+        <h3>Diet Chart</h3>
+        <p>Your prescribed diet by your doctor.</p>
+      </div>
+
+      <div class="feature-card" onclick="showMedicationChart()">
+        <img src="medicationchart.jpg" alt="Medication Chart" />
+        <h3>Medication Chart</h3>
+        <p>Your prescribed medications by your doctor.</p>
+      </div>
+
+      <div class="feature-card chatbot-highlight" onclick="location.href='chatbots.html'">
+        <img src="chatbot.jpg" alt="Chatbot" />
+        <h3>Chatbot</h3>
+        <p>Talk to our AI-powered recovery coach anytime.</p>
+      </div>
+
+      <div class="feature-card" onclick="showSupportCircle()">
+        <img src="support.jpg" alt="Support Circle" />
+        <h3>Support Circle</h3>
+        <p>Your doctor, emergency contacts, and insurance in one place.</p>
+      </div>
+
+      <div class="feature-card" onclick="showHug()">
+        <img src="hugs.jpg" alt="Hugs" />
+        <h3>Hugs</h3>
+        <p>Need a hug? Click here for comfort 💖</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Hug Popup -->
+  <div id="hug-popup" class="popup-overlay">
+    <span class="close-btn" onclick="closeHug()">×</span>
+    <img id="rickroll-gif" src="https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" alt="Rickroll Hug" />
+  </div>
+
+  <!-- Medication Chart Popup -->
+  <div id="medication-popup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closeMedicationChart()">×</span>
+      <h2>Post-Liposuction Medication Chart</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Medication</th><th>Dosage</th><th>Frequency</th><th>Purpose</th><th>Duration</th><th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Acetaminophen</td><td>500 mg</td><td>Every 6h</td><td>Pain</td><td>5–7 days</td><td>With food</td></tr>
+          <tr><td>Ibuprofen</td><td>400 mg</td><td>Every 8h</td><td>Inflammation</td><td>3–5 days</td><td>Stomach caution</td></tr>
+          <tr><td>Cephalexin</td><td>500 mg</td><td>Every 8h</td><td>Antibiotic</td><td>7–10 days</td><td>Finish course</td></tr>
+          <tr><td>Zofran</td><td>4 mg</td><td>As needed</td><td>Nausea</td><td>PRN</td><td>Max 3/day</td></tr>
+          <tr><td>Arnica</td><td>30C</td><td>2x daily</td><td>Bruising</td><td>7 days</td><td>Optional</td></tr>
+          <tr><td>Hydrocodone</td><td>5/325 mg</td><td>4–6h PRN</td><td>Severe pain</td><td>Max 3 days</td><td>No driving</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Diet Chart Popup -->
+  <div id="diet-popup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closeDietChart()">×</span>
+      <h2>Post-Liposuction Diet Chart</h2>
+      <table class="diet-chart">
+        <thead>
+          <tr>
+            <th>🗓️ Days</th><th>Phase</th><th>Recommended Diet</th><th>Goals</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1–2</td><td>🧃 Liquid</td><td>Broth, tea, juice, protein water</td><td>Hydration, reduce swelling</td></tr>
+          <tr><td>3–10</td><td>🍚 Soft</td><td>Oatmeal, rice, yogurt, steamed veg</td><td>Easy digestion</td></tr>
+          <tr><td>11–30</td><td>🥗 Clean</td><td>Greens, protein, smoothies</td><td>Tissue healing</td></tr>
+          <tr><td>31–60</td><td>🥙 Anti-inflammatory</td><td>Salmon, turmeric, whole grains</td><td>Energy boost</td></tr>
+          <tr><td>61+</td><td>🍽️ Maintenance</td><td>Balanced meals, fiber, hydration</td><td>Stability</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Support Circle Popup -->
+  <div id="support-popup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-btn" onclick="closeSupportCircle()">×</span>
+      <h2>Support Circle</h2>
+
+      <h3>👨‍⚕️ Primary Surgeon</h3>
+      <p><strong>Name:</strong> Dr. Lauren Mitchell</p>
+      <p><strong>Specialty:</strong> Cosmetic & Reconstructive Surgeon</p>
+      <p><strong>Clinic:</strong> Clearwater Plastic Surgery Center</p>
+      <p><strong>Phone:</strong> (727) 555-2371</p>
+      <p><strong>Email:</strong> lauren.mitchell@clearwaterplastics.com</p>
+      <p><strong>Available Hours:</strong> Mon–Fri, 9:00 AM – 5:00 PM</p>
+      <p><strong>Emergency Line:</strong> (727) 555-9110</p>
+
+      <h3>🏥 Clinic / Hospital Info</h3>
+      <p><strong>Facility:</strong> Clearwater Plastic Surgery Center</p>
+      <p><strong>Address:</strong> 1020 Gulfview Drive, Clearwater, FL 33755</p>
+      <p><strong>General Line:</strong> (727) 555-8210</p>
+      <p><strong>Email:</strong> frontdesk@clearwaterplastics.com</p>
+      <p><strong>Post-Op Nurse Hotline:</strong> (727) 555-8900 (24/7)</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 HEALBUDDY</p>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>

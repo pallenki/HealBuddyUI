@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Symptom Checker – HEALBUDDY</title>
+  <link rel="stylesheet" href="symptoms.css" />
+</head>
+<body>
+  <header class="fancy-header">
+    <div class="logo-container">
+      <a href="home.html"><img src="Health.jpg" alt="HEALBUDDY" class="fancy-logo" /></a>
+      <h1>HEALBUDDY</h1>
+    </div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="chatbots.html">CHATBOTS</a>
+      <a href="#">MY PROFILE</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="chatbox">
+      <h2>Symptom Checker</h2>
+      <div id="chat-window"></div>
+      <div class="input-row">
+        <input type="text" id="user-input" placeholder="Describe your symptoms..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2025 HEALBUDDY</p></footer>
+  <script src="symptoms.js"></script>
+</body>
+</html>
