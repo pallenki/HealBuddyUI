@@ -1,36 +1,24 @@
-﻿const cat = document.getElementById("catAvatar");
-const catText = document.getElementById("catText");
-const purrSound = document.getElementById("purrSound");
-const eatSound = document.getElementById("eatSound");
+let catState = 0;
 
-const actions = ["Purr me?", "Feed me?"];
+function feedCat() {
+  const catImg = document.getElementById("floating-cat");
+  const caption = document.getElementById("cat-caption");
 
-function randomAction() {
-  const choice = actions[Math.floor(Math.random() * actions.length)];
-  catText.textContent = choice;
-  cat.src = "cat.gif";
-}
+  // Load audio files
+  const eatSound = new Audio("eat.wav");
+  const purrSound = new Audio("purr.wav");
 
-// Handle click based on request
-cat.addEventListener("click", () => {
-  if (catText.textContent.includes("Purr")) {
-    purrSound.play();
-    cat.src = "catpurr.gif";
-    catText.textContent = "Prrrrrr... 😽";
-  } else if (catText.textContent.includes("Feed")) {
+  if (catState === 0) {
+    catImg.src = "cateat.gif";
+    caption.textContent = "Yum!";
     eatSound.play();
-    cat.src = "cateat.gif";
-    catText.textContent = "Yum! 🐟";
+    catState = 1;
+
+    setTimeout(() => {
+      catImg.src = "catpurr.gif";
+      caption.textContent = "Prrrr... Thanks for feeding me! 😻";
+      purrSound.play();
+      catState = 2;
+    }, 3500);
   }
-
-  // Reset back to idle after 3 seconds
-  setTimeout(() => {
-    randomAction();
-  }, 3000);
-});
-
-// Change mood every 10 seconds
-setInterval(randomAction, 10000);
-
-// Start the first interaction
-randomAction();
+}
