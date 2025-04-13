@@ -1,31 +1,19 @@
 async function sendMessage() {
-    const input = document.getElementById("user-input");
-    const message = input.value.trim();
-    if (!message) return;
-  
-    const chatWindow = document.getElementById("chat-window");
-  
-    // Show user message
-    chatWindow.innerHTML += `<div class="user-msg">${message}</div>`;
-    input.value = "";
-  
-    try {
-      // Send to backend (replace with your friend’s actual API endpoint)
-      const response = await fetch("http://localhost:8000/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message })
-      });
-  
-      const data = await response.json();
-  
-      // Show bot response
-      chatWindow.innerHTML += `<div class="bot-msg">${data.response}</div>`;
-      chatWindow.scrollTop = chatWindow.scrollHeight;
-    } catch (error) {
-      chatWindow.innerHTML += `<div class="bot-msg">⚠️ Could not connect to the server.</div>`;
-    }
+  const message = document.getElementById("userInput").value;
+  const context = document.getElementById("contextInput").value;
+  const responseBox = document.getElementById("responseArea");
+  responseBox.innerText = "Thinking... 🤖";
+
+  try {
+    const response = await fetch("https://healbuddy.onrender.com/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: message, context: context })
+    });
+
+    const data = await response.json();
+    responseBox.innerText = data.reply || "❌ No reply received.";
+  } catch (err) {
+    responseBox.innerText = "⚠️ Error: " + err.message;
   }
-  
+}
