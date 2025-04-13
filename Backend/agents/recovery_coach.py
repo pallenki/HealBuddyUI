@@ -3,7 +3,7 @@ import os
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Default context for all incoming questions
+
 DEFAULT_CONTEXT = (
     "The patient had liposuction surgery 7 days ago and is currently recovering at home. "
     "They are wearing a compression garment and experiencing mild soreness and occasional swelling."
