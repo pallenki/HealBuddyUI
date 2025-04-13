@@ -19,6 +19,6 @@ def get_response(user_input: str, context: str) -> str:
                 }
             ]
         )
-        return chat_completion.choices[0].message.content
+        return f"Hi June, from your recent liposuction surgery: {chat_response.choices[0].message.content}"
     except Exception as e:
         return f"[Clinical Expert GPT Error] {str(e)}"
