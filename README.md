@@ -2,7 +2,7 @@
 
 **HealBuddy** is a multi-agent AI web app designed to support patients during post-surgical recovery. It combines empathetic UI with smart assistants powered by **Gemini** and **GPT-4**, providing personalized guidance, symptom checking, and calming support — all from a browser.
 
-![HealBuddy Screenshot](./healbuddy.png)
+<img src="./healbuddy.png" alt="HealBuddy Logo" width="300"/>
 
 ---
 
