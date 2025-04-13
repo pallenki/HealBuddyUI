@@ -19,7 +19,9 @@ def route_to_agent(message, context):
         return symptom_response(message), "Gemini (Symptom Checker)"
 
     # Recovery motivation or general "can I"/"should I" → GPT Recovery Coach
-    elif any(word in lowered for word in ["can i", "should i", "am i allowed", "when can", "is it okay", "do i need to"]):
+    elif any(word in lowered for word in ["i feel", "i am feeling", "i’m sad", "feeling down", 
+    "i'm scared", "i feel alone", "i am depressed", "forget the pain",
+    "emotional", "lonely", "unmotivated", "hopeless", "anxious", "worried"]):
         print("[Router] Routing to Recovery Coach (GPT-4)")
         return coach_response(message, context), "GPT-4 (Recovery Coach)"
 
