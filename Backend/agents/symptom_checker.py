@@ -31,7 +31,7 @@ def get_gemini_response(message: str, context: str = "") -> str:
 
 
         response = model.generate_content(prompt)
-        return response.text.strip()
+        return f"Hi June, from your recent liposuction surgery: {response.text.strip()}"
 
     except Exception as e:
         return f"[Gemini Error] {e}"
