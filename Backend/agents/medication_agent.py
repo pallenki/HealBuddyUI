@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Default context for liposuction patient
 DEFAULT_CONTEXT = (
     "The patient had liposuction surgery 7 days ago and is currently recovering at home. "
     "They are wearing a compression garment and experiencing mild soreness and occasional swelling."
