@@ -10,16 +10,10 @@
 
 - 🤖 **Multi-Agent AI System**  
   - **Gemini**: Symptom checker  
-  - **GPT-4**: Recovery motivation + emotional support
-
-- 💬 **AI Chat Interface**  
-  A single GPT-powered assistant that helps patients with:
-  - Recovery motivation (Recovery Coach)
-  - Emotional support (MindEase)
-  - Delivered via different chat pages, using the same backend agent
+  - **GPT-4**: Mind Ease
 
 - 🐱 **Calm Companion Mode**  
-  Talking Tom-style interactive cat that purrs, smiles, and reacts when clicked or fed — helping patients feel calm and comforted.
+  Interactive cat that purrs, smiles, and reacts when clicked or fed — helping patients feel calm and comforted.
 
 - 🧠 **Context-Aware Responses**  
   All agents use a patient profile to personalize replies (e.g. 7 days post-surgery), limiting hallucination and improving clarity.
@@ -66,7 +60,7 @@ ProjectHealBuddy/
 - **Frontend**: HTML, CSS, JavaScript  
 - **Backend**: Python (Flask), OpenAI GPT-4, Google Gemini Pro  
 - **Database**: MongoDB Atlas  
-- **Deployment**: Render (backend), GoDaddy or GitHub Pages (frontend)
+- **Deployment**: Render (backend), GoDaddy (frontend)
 
 ---
 
