@@ -75,7 +75,7 @@ ProjectHealBuddy/
 ## 🏁 Judges, Try This:
 
 - Ask symptoms ➡️ Get personalized response  
-- Visit the Calm Companion for fun distraction  
+- Visit the Cat Companion for fun distraction  
 - Experience the emotional support tone ➡️ MindEase
 
 ---
