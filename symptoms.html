@@ -19,13 +19,12 @@
   </header>
 
   <main>
-    <div class="chatbox">
-      <h2>Symptom Checker</h2>
-      <div id="chat-window"></div>
-      <div class="input-row">
-        <input type="text" id="user-input" placeholder="Describe your symptoms..." />
-        <button onclick="sendMessage()">Send</button>
-      </div>
+    <div id="chatbox-container">
+      <h2>Ask Your Assistant</h2>
+      <textarea id="userInput" placeholder="Describe your symptoms or ask a question..."></textarea>
+      <input type="text" id="contextInput" placeholder="Optional: context (e.g. 3 days post-surgery)">
+      <button onclick="sendMessage()">Send</button>
+      <div id="responseArea"></div>
     </div>
   </main>
 
