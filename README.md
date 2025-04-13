@@ -64,22 +64,6 @@ ProjectHealBuddy/
 
 ---
 
-## ✅ Live Demo URLs
-
-```
-Backend API:
-  https://healbuddy.onrender.com/create-profile
-  https://healbuddy.onrender.com/chat
-
-Frontend Pages:
-  https://<your-frontend-host>/home.html         ← Create patient profile
-  https://<your-frontend-host>/symptoms.html     ← Symptom Checker (Gemini)
-  https://<your-frontend-host>/mindease.html      ← MindEase (GPT support)
-  https://<your-frontend-host>/cat/index.html     ← Calm Companion
-```
-
----
-
 ## 👥 Team HealBuddy
 
 - **Pavan** – AI Agents and Ops  
@@ -87,6 +71,12 @@ Frontend Pages:
 - **Nithin** – Backend, Integration
 
 ---
+
+## 🏁 Judges, Try This:
+
+- Ask symptoms ➡️ Get personalized response  
+- Visit the Calm Companion for fun distraction  
+- Experience the emotional support tone ➡️ MindEase
 
 ## 🔮 Future Improvements
 
@@ -99,8 +89,8 @@ Frontend Pages:
 - 🔍 **Conversation History**  
   Add lightweight session memory or persistent logs to support multi-turn interactions and context continuity.
 
-- 🌐 **Multilingual Support**  
-  Allow patients to interact with agents in multiple languages using translation APIs.
+- 🌐 **Voice Support**  
+  Allow patients to interact with agents in thorugh using  Web Speech APIs.
 
 - 📈 **Progress Insights**  
   Generate positive feedback using patient trends (e.g., “You’ve stayed consistent for 3 days!”).
