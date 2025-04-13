@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HealBuddy Cat Companion</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fffaf0;
+      padding: 40px;
+    }
+
+    #cat {
+      width: 280px;
+      height: auto;
+      margin: 20px auto;
+      transition: transform 0.3s ease;
+    }
+
+    #cat:hover {
+      transform: scale(1.05);
+    }
+
+    #speechBubble {
+      background: #fff;
+      border-radius: 15px;
+      padding: 10px 15px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #555;
+      border: 2px solid #eee;
+    }
+
+    #caption {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😺 HealBuddy Cat</h1>
+
+  <div id="speechBubble">I'm hungry... Will you feed me? 🍉</div>
+  <img id="cat" src="cat.gif" alt="Cat Companion" />
+
+  <div id="caption"></div>
+
+  <audio id="eatSound" src="eat.wav"></audio>
+
+  <script>
+    const catImg = document.getElementById('cat');
+    const speech = document.getElementById('speechBubble');
+    const caption = document.getElementById('caption');
+    const eatSound = document.getElementById('eatSound');
+
+    function resetCat() {
+      // After eating, show purring gif and thank you
+      catImg.src = "catpurr.gif";
+      caption.textContent = "Prrrr... Thanks for feeding me! 😻";
+      speech.textContent = "";
+    }
+
+    catImg.addEventListener("click", () => {
+      catImg.src = "cateat.gif";
+      eatSound.play();
+      caption.textContent = "Yum! That was tasty 🐟";
+      speech.textContent = "";
+
+      setTimeout(resetCat, 4000); // Switch to purr after 4 sec
+    });
+
+    // Set default asking message on load
+    window.onload = () => {
+      speech.textContent = "I'm hungry... Will you feed me? 🍉";
+    };
+  </script>
+
+</body>
+</html>
