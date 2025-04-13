@@ -19,14 +19,12 @@
   </header>
 
   <main>
-    <div class="chatbox">
-      <h2>Mind Ease</h2>
-      <p class="subheading">Let’s check in. I’m here to help you feel better 🌿</p>
-      <div id="chat-window"></div>
-      <div class="input-row">
-        <input type="text" id="user-input" placeholder="How are you feeling?" />
-        <button onclick="sendMindEase()">Send</button>
-      </div>
+    <div id="chatbox-container">
+      <h2>Talk to MindEase</h2>
+      <textarea id="userInput" placeholder="What's on your mind? Feeling anxious, sad, or stressed?"></textarea>
+      <input type="text" id="contextInput" placeholder="Optional: e.g. recovering after surgery">
+      <button onclick="sendMessage()">Send</button>
+      <div id="responseArea"></div>
     </div>
   </main>
 
