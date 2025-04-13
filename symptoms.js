@@ -2,7 +2,7 @@ async function sendMessage() {
   const message = document.getElementById("userInput").value;
   const context = document.getElementById("contextInput").value;
   const responseBox = document.getElementById("responseArea");
-  responseBox.innerText = "Thinking... 🤖";
+  responseBox.innerText = "Multi-Agent AI Backend is Thinking... 🧠";
 
   try {
     const response = await fetch("https://healbuddy.onrender.com/chat", {
