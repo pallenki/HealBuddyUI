@@ -12,7 +12,7 @@ DEFAULT_CONTEXT = (
 
 def get_gemini_response(prompt: str) -> str:
     try:
-        model = genai.GenerativeModel(model_name="gemini-pro")
+        model = genai.GenerativeModel("gemini-pro")
         response = model.generate_content(
             f"Patient context: {full_context}\n"
             f"You are a medical assistant. Respond in 5 lines or less. Be safe, clear, and concise.\n\n{prompt}"
